@@ -1,5 +1,5 @@
 {
-  "name": "rspack-react-ts-starter",
+  "name": "@empjs/rspack-app",
   "private": true,
   "version": "1.0.0",
   "scripts": {
