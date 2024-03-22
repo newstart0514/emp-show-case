@@ -1,8 +1,8 @@
 import {Suspense, useState} from 'react'
-import ReactLogo from './assets/react.svg'
-import ReactInline from './assets/react.svg?inline'
+// import ReactLogo from './assets/react.svg'
+// import ReactInline from './assets/react.svg?inline'
 import './App.css'
-import React from 'react'
+// import React from 'react'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <div>
         <a rel="noreferrer">
-          <img src={ReactLogo} className="logo react" alt="React logo" />
+          {/* <img src={ReactLogo} className="logo react" alt="React logo" /> */}
           {/* <ReactLogo /> */}
         </a>
       </div>
@@ -24,12 +24,8 @@ function App() {
       <p className="read-the-docs">Click on the emp and React logos to learn more</p>
       <h2>Image List</h2>
       <div className="imageList">
-        <span>
-          inline: <img src={ReactInline} />
-        </span>
-        <span>
-          url: <img src={ReactLogo} />
-        </span>
+        <span>{/* inline: <img src={ReactInline} /> */}</span>
+        <span>{/* url: <img src={ReactLogo} /> */}</span>
       </div>
       <h1>act ui lazy loader</h1>
     </div>

@@ -2,22 +2,21 @@ const rspack = require('@rspack/core')
 const refreshPlugin = require('@rspack/plugin-react-refresh')
 const isDev = process.env.NODE_ENV === 'development'
 
-new rspack.container.ModuleFederationPlugin({
-  name: 'esmReactApp',
-  remotes: {
-    esmReactHost: 'esmReactHost@http://localhost:8080/emp.js',
-  },
-  shared: {
-    react: {singleton: true},
-    'react-dom': {singleton: true},
-  },
-})
-
 /**
  * @type {import('@rspack/cli').Configuration}
  */
 module.exports = {
   context: __dirname,
+  experiments: {
+    outputModule: true,
+  },
+  output: {
+    chunkFormat: 'module',
+    chunkLoading: 'import',
+    library: {
+      type: 'module',
+    },
+  },
   entry: {
     main: './src/index.ts',
   },
@@ -66,6 +65,16 @@ module.exports = {
     new rspack.ProgressPlugin({}),
     new rspack.HtmlRspackPlugin({
       template: './index.html',
+    }),
+    new rspack.container.ModuleFederationPlugin({
+      name: 'esmReactApp',
+      remotes: {
+        esmReactHost: 'esmReactHost@http://localhost:8080/main.mjs',
+      },
+      shared: {
+        react: {singleton: true},
+        'react-dom': {singleton: true},
+      },
     }),
     isDev ? new refreshPlugin() : null,
   ].filter(Boolean),
