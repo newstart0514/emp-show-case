@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "devDependencies": {
-    "@empjs/cli": "workspace:*",
-    "@empjs/plugin-vue2": "workspace:^*"
+    "@empjs/cli": "*",
+    "@empjs/plugin-vue2": "*"
   },
   "dependencies": {
     "element-ui": "^2.15.14",

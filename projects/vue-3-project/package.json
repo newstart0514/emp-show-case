@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "devDependencies": {
-    "@empjs/cli": "workspace:*",
-    "@empjs/plugin-vue3": "workspace:^*"
+    "@empjs/cli": "*",
+    "@empjs/plugin-vue3": "*"
   },
   "dependencies": {
     "ant-design-vue": "^4.1.2",
