@@ -1,40 +1,24 @@
 {
-  "name": "emp-show-case",
+  "name": "vue-2-project",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
+  "license": "MIT",
   "private": true,
-  "scripts": {
-    "prepare": "husky install"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "engines": {
-    "node": ">=20.0.0",
-    "pnpm": ">=8"
-  },
+  "type": "module",
   "devDependencies": {
-    "@commitlint/cli": "^17.8.0",
-    "@commitlint/config-conventional": "^17.8.0",
-    "@empjs/eslint-config-react": "^1.0.1",
-    "husky": "^8.0.3",
-    "lint-staged": "^15.0.2",
-    "typescript": "^5.3.3"
+    "@empjs/cli": "*",
+    "@empjs/plugin-vue2": "*"
   },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
+  "dependencies": {
+    "vue": "^2.7.14",
+    "vue-router": "3",
+    "vuex": "3"
   },
-  "eslintConfig": {
-    "root": true,
-    "extends": [
-      "@empjs/eslint-config-react"
-    ]
-  },
-  "eslintIgnore": [
-    "node_modules",
-    "dist"
-  ]
+  "scripts": {
+    "dev": "emp dev",
+    "build": "emp build --env prod",
+    "start": "emp serve",
+    "stat": "emp build --analyze",
+    "emp": "emp"
+  }
 }
