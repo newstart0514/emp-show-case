@@ -11,13 +11,15 @@
   "tasks": {
     "prepare": {
       "name": "prepare",
-      "command": "pnpm prepare",
-      "runAtStart": false
+      "command": "pnpm prepare"
     },
     "pnpm dev": {
       "name": "pnpm dev",
       "command": "pnpm dev",
-      "runAtStart": true
+      "runAtStart": true,
+      "preview": {
+        "port": 9001
+      }
     }
   }
 }
